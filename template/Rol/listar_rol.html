@@ -1,6 +1,6 @@
 
-<table class="table">
-    <thead class="thead-dark">
+<table>
+    <thead >
         <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -16,6 +16,7 @@
                 
             </td>
             <td><a href="{% url 'update_rol' roles.id %}" >Editar</a></td>
+            <td><a href="{% url 'delete_rol' roles.id %}" >eliminar</a></td>
         </tr>
         {% endfor %}
     </tbody>
