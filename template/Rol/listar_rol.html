@@ -1,0 +1,22 @@
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for roles in  rol %}
+        <tr>
+            <td>{{ roles.id }}</td>
+            <td>{{ roles.nombre }}</td>
+            
+            <td>
+                
+            </td>
+            <td><a href="{% url 'update_rol' roles.id %}" >Editar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

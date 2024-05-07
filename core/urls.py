@@ -16,9 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from apps.reservas.views import Home ,Registro,create_rol,update_rol,delete_rol,listar_rol
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    #RUTA DE FUNCIONARIO 
+    path('', Home, name='home'),
+    path('registro/', Registro, name='registro'),
+    #path('login/', login, name='login' ),
+    #path('logaut/', logaut, name='logaut'),
+    
+    #RUTAS DE ROL
+    
+    path('rol/create/', create_rol, name='create_rol'),
+    path('rol/update/<int:id>', update_rol, name='update_rol'),
+    path('rol/delete/<int:id>', delete_rol, name='delete_rol'),
+    path('rol/listar/', listar_rol, name='listar_rol'),
+    
+
 ]
 
-#rutas 
