@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractBaseUser
 class Base(models.Model):
     creacion = models.DateField(auto_now=True)
     actualizacion = models.DateField(auto_now_add=True)
