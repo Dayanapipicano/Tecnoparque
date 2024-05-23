@@ -1,5 +1,59 @@
-<h1>hola desde inicio</h1>
+{%include "base.html" %}
+<!-- bootstrap-->
+<style>
 
-<a href="{% url 'registro'%}">registro</a>
-<a href="{% url 'create_rol'%}">Rol</a>
-<a href="{% url 'create_tipo_documento'%}">Tipo documento</a>
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url('/static/bootstrap/img/fondoAzul.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: sans-serif;
+        height: 100vh; 
+        
+        }
+        .inicio {
+            border-radius: 6px;
+            width: 40%;
+            height: 30%;
+            backdrop-filter: blur(3px);
+           background:rgba(255, 255, 255, 0.789);
+            position: absolute;
+            top:35%;
+            left:10%;
+            box-sizing: border-box;
+            padding: 70px 30px;
+          }
+
+          .imagen {
+            border-radius: 6px;
+            width: 30%;
+            height: 50%;
+            backdrop-filter: blur(3px);
+           background:rgba(255, 255, 255, 0.789);
+            position: absolute;
+            top:25%;
+            left:60%;
+            box-sizing: border-box;
+            padding: 70px 30px;
+          }
+
+</style>
+
+
+{% block body %}
+
+<div class="inicio">
+    <h1></h1>
+    <p></p>
+
+ <div class="container">
+    <a href="{% url 'gestiones:login' %}" class="btn btn-primary">Iniciar Sesión</a>
+</div>
+
+</div>
+
+<div class="imagen"> </div>
+
+{% endblock %}
+

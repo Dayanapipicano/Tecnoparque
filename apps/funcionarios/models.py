@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import User
+
+
 class Base(models.Model):
     creacion = models.DateField(auto_now=True)
     actualizacion = models.DateField(auto_now_add=True)
@@ -28,3 +31,12 @@ class Persona(AbstractBaseUser):
     id_cargo = models.ForeignKey(Cargo, on_delete=models.CASCADE)
     id_dependencia = models.ForeignKey(Dependencia,on_delete=models.CASCADE)
     id_rol = models.OneToOneField(Rol,on_delete=models.CASCADE,)
+    
+    
+class UserPerfil(models.Model):
+    """
+    modelo userperfil de inicio de sesion
+    """
+    objects = models.Manager()
+    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    avatar=models.ImageField(upload_to="user/avatar/")
