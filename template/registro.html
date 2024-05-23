@@ -1,1 +1,76 @@
-<h1>hola desde registro</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form>
+                <h2 class="text-center mb-4">Crea una cuenta</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-2 form-gropup">
+                        <label for="identificacion">Identificación</label>
+                        <input type="text" class="form-control" id="identificacion" placeholder="Cédula de ciudadanía">
+                    </div>
+                    <div class="col-md-6 mb-2 form-group">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" placeholder="Ingrese su nombre">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-2 form-group">
+                        <label for="cargo">Cargo</label>
+                        <select class="form-control" id="cargo">
+                            <option>Instructor</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-2 form-group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="Ingrese sus apellidos">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-2 form-group">
+                        <label for="dependecia">Dependencia</label>
+                        <select class="form-control" id="dependencia">
+                            <option>Centro comercio y servicios</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-2 form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" class="form-control" id="correo" placeholder="ejemplo@sena.edu.co">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-2 form-group">
+                        <label for="telefono">Numero telefonico</label>
+                        <input type="text" class="form-control" id="telefono" placeholder="601 764 9960">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <label for="confirmarContrasena">Confirmar contraseña</label>
+                        <input type="password" class="form-control" id="confirmarContrasena" placeholder="Confirmar contraseña">
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-center mb-3 my-3">
+                    <button type="submit" class="btn btn-primary mb-2">Continuar</button>
+                    <a href="#" class="btn btn-secondary">Regresar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bootrstrap JS -->
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
